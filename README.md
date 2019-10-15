@@ -4,7 +4,7 @@
 ## How To Get Started
  run the following command:
   
- 1.cd file element eg:
+ 1.cd  the file path '/element', eg:
 ```bash
 $  cd /Users/example/Desktop/element-react-native/element  
 ```
