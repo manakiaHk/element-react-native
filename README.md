@@ -28,4 +28,4 @@ $ react-native run-android
 ```
     
    
-![image](https://github.com/manakiaHk/element-react-native/demo-ios.gif)
+![image](https://github.com/manakiaHk/element-react-native/blob/master/demo-ios.gif)
