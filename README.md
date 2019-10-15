@@ -15,18 +15,18 @@ $ yarn install
 ```
  3.Run instructions for iOS:
  • cd element && react-native run-ios
- ```bash
- $ react-native run-ios 
- ```
-    - or -
+```bash
+$ react-native run-ios 
+```
+  - or -
     • Open element/ios/elementStu.xcworkspace in Xcode or run "xed -b ios"
     • Hit the Run button
  4.Run instructions for Android:
     • Have an Android emulator running (quickest way to get started), or a device connected.
     • cd element && react-native run-android
-    ```bash
-    $ react-native run-android 
-    ```
+```bash
+$ react-native run-android 
+```
     
    
 
