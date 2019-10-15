@@ -27,18 +27,11 @@ Have an Android emulator running (quickest way to get started), or a device conn
 $ react-native run-android 
 ```
     
-   
-   ![image](https://github.com/manakiaHk/element-react-native/blob/master/screenshot/ios-home%402x.png)
-   ![image](https://github.com/manakiaHk/element-react-native/blob/master/screenshot/android-home.png)
-   
-   ![image](https://github.com/manakiaHk/element-react-native/blob/master/screenshot/ios-discover02.png)
-   ![image](https://github.com/manakiaHk/element-react-native/blob/master/screenshot/android-discover01.png)
-   
-   ![image](https://github.com/manakiaHk/element-react-native/blob/master/screenshot/ios-me.png)
-   ![image](https://github.com/manakiaHk/element-react-native/blob/master/screenshot/android-me.png)
-   
-   ![image](https://github.com/manakiaHk/element-react-native/blob/master/screenshot/ios-me.png)
-   ![image](https://github.com/manakiaHk/element-react-native/blob/master/screenshot/android-me.png)
+   ![image](https://github.com/manakiaHk/element-react-native/blob/master/screenshot/screenshot-home.png)
+   ![image](https://github.com/manakiaHk/element-react-native/blob/master/screenshot/screenshot-discover.png)
+   ![image](https://github.com/manakiaHk/element-react-native/blob/master/screenshot/screenshot-recomend.png)
+   ![image](https://github.com/manakiaHk/element-react-native/blob/master/screenshot/screenshot-mine.png)
+
    
   
    
