@@ -19,8 +19,8 @@ $ yarn install
 $ react-native run-ios 
 ```
 --or--
-Open element/ios/elementStu.xcworkspace in Xcode or run "xed -b ios"
-Hit the Run button
+a)Open element/ios/elementStu.xcworkspace in Xcode or run "xed -b ios" 
+b)Hit the Run button
 
 4.Run instructions for Android:
 Have an Android emulator running (quickest way to get started), or a device connected.
