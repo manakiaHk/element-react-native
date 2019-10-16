@@ -2,6 +2,9 @@
 这是一个用纯React-Native 构建的App 项目，界面仿了饿了吗主要界面，仅供学习使用。有兴趣的同仁可以下载代码，提出您宝贵意见。
 
 ## How To Get Started
+
+ 这里假设你已经安装配置好react-native的开发环境，如果没有请点击这里 https://reactnative.cn/docs/getting-started.html
+ 
  run the following command:
   
  1.cd  the file path '/element', eg:
