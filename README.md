@@ -11,7 +11,6 @@
 ```bash
 $  cd /Users/example/Desktop/element-react-native/element  
 ```
-  install node_modules
 ```bash
 $ yarn install  
 ```
