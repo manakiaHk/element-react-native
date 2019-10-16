@@ -7,7 +7,7 @@
 
  run the following command:
   
- 1.cd  the file path '/element',then run $ yarn install  install node_modules eg:
+ 1.cd  path '/element',then run command 'yarn install'  install node_modules eg:
 ```bash
 $  cd /Users/example/Desktop/element-react-native/element  
 ```
@@ -17,11 +17,11 @@ $ yarn install
 ```
  2.Run instructions for iOS:
  
- (1)cd  '/element/ios' ,run  $ pod install
+ (1)cd path '/element/ios' ,run  command 'pod install' 
  ```bash
  $ pod install 
  ```
- (2)cd '/element', run $ react-native run-ios
+ (2)cd path '/element', run command 'react-native run-ios'
 ```bash
 $ react-native run-ios 
 ```
