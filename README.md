@@ -18,6 +18,12 @@ $ yarn install
 ```
  3.Run instructions for iOS:
  • cd element && react-native run-ios
+ 
+ (1)cd  the file path '/element/ios' ,
+  run the following command
+ ```bash
+ $ pod install 
+ ```
 ```bash
 $ react-native run-ios 
 ```
