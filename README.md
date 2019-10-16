@@ -18,11 +18,11 @@ $ yarn install
 ```
  3.Run instructions for iOS:
  
- (1)cd  '/element/ios' ,run  $ command pod install
+ (1)cd  '/element/ios' ,run  $ pod install
  ```bash
  $ pod install 
  ```
- (2)cd '/element' run  command $ react-native run-ios
+ (2)cd '/element', run $ react-native run-ios
 ```bash
 $ react-native run-ios 
 ```
