@@ -17,13 +17,12 @@ $  cd /Users/example/Desktop/element-react-native/element
 $ yarn install  
 ```
  3.Run instructions for iOS:
- • cd element && react-native run-ios
  
- (1)cd  the file path '/element/ios' ,
-  run the following command
+ (1)cd  '/element/ios' ,run  $ command pod install
  ```bash
  $ pod install 
  ```
+ (2)cd '/element' run  command $ react-native run-ios
 ```bash
 $ react-native run-ios 
 ```
