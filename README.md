@@ -3,8 +3,8 @@
 
 ## How To Get Started
 
- 这里假设你已经安装配置好react-native的开发环境，如果没有请点击这里 https://reactnative.cn/docs/getting-started.html
- 
+ （这里假设你已经安装配置好react-native的开发环境，如果没有请点击这里 https://reactnative.cn/docs/getting-started.html）
+
  run the following command:
   
  1.cd  the file path '/element', eg:
