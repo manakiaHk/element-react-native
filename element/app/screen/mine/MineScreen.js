@@ -38,7 +38,7 @@ export  default  class MineScreen extends React.Component {
                 <FlatList
                     data={this.state.dataSource}
                     renderItem={({item}) => <MineListItemView model={item} onPress={()=>this.pressItem(item)}/>}
-                    keyExtractor={(item, index)=>index+''}MineListHeaderView
+                    keyExtractor={(item, index)=>index+''}
                     ListHeaderComponent={<MineListHeaderView
                         userName={this.state.user?this.state.user.userName:'登录/注册'}
                         usePhone={this.state.user?this.state.user.userAccount:'登录后享受更多特权'}

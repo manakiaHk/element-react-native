@@ -5,7 +5,6 @@ import {
     RefreshControl,
     StatusBar,
     FlatList,
-    NativeModules
 } from 'react-native';
 
 import  CategoryView from './view/HomeCategoryView'
@@ -122,29 +121,20 @@ export  default class HomeScreen extends React.Component{
     componentDidMount() {
 
         ///获取转态栏高度
-        if (Platform.OS==='ios'){
-            NativeModules.StatusBarManager.getHeight(statusBarHeight => {
-                this.setState({
-                    statusBarHeight:statusBarHeight.height
-                });
-            });
-        }else {
+        global.statusBarManager.statusHeight((height)=>{
             this.setState({
-                statusBarHeight:StatusBar.currentHeight
+                statusBarHeight:height
             });
-        }
-
+        });
         this.didFocusSubscription = this.props.navigation.addListener(
-            'didFocus',
-            ()=>{
+            'didFocus', ()=>{
                 this.setState({
                     statusBarStyle:'light-content'
                 });
             }
         );
         this.didBlurSubscription = this.props.navigation.addListener(
-            'didBlur',
-            ()=>{
+            'didBlur', ()=>{
                 this.setState({
                     statusBarStyle:'dark-content'
                 });
@@ -175,8 +165,8 @@ export  default class HomeScreen extends React.Component{
     }
 
     listOnPressItem(index){
-        console.log(this.state.sellers[index]);
-        this.props.navigation.push('SellerDetails', this.state.sellers[index]);
+        // console.log(this.state.sellers[index]);
+        this.props.navigation.push('Shop', this.state.sellers[index]);
 
     }
     listOnEndReached (info){

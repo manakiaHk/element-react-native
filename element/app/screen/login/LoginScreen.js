@@ -128,8 +128,6 @@ export default class LoginScreen extends   React.Component {
     }
     _userPrivacy() {
         this.props.navigation.push('UserPrivacy');
-
-
     }
 
 }

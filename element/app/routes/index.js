@@ -3,6 +3,7 @@ import {Image} from "react-native";
 import React from 'react'
 import {
     createAppContainer,
+
 } from 'react-navigation';
 import createAnimatedSwitchNavigator from 'react-navigation-animated-switch';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
@@ -93,4 +94,5 @@ const AppRootNavigator = createAnimatedSwitchNavigator(  {
 const  AppRoot = createAppContainer(AppRootNavigator);
 
 export  default AppRoot;
+
 

@@ -6,6 +6,7 @@ import {
 
 export  default class HomeCategoryDetailsScreen extends React.Component{
     static navigationOptions = ({ navigation }) => {
+        console.log(navigation.state);
         return {
             title: navigation.getParam('title')
         };

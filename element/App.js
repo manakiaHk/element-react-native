@@ -13,9 +13,7 @@ import AppRoot from './app/routes/index';
 export default class App extends React.Component{
     render () {
         return (
-            <AppRoot>
-
-            </AppRoot>
+            <AppRoot/>
         );
     }
 };

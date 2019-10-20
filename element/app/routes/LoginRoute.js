@@ -17,6 +17,7 @@ const LoginStackNavigator = createStackNavigator(  {
         Userprotocol:UserProtocolScreen,
         UserPrivacy :UserPrivacyScreen,
     },
+    ///config
     {
         initialRouteName: 'Root',
         headerMode:'screen',

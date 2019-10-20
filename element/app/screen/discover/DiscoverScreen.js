@@ -38,8 +38,6 @@ export  default class DiscoverScreen extends React.Component {
                 }]
 
         };
-
-
     }
     render() {
         return (

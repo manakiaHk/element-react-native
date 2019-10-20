@@ -3,7 +3,8 @@ import { createStackNavigator } from 'react-navigation-stack';
 import RouteConfig from './RouteConfig';
 import HomeScreen from '../screen/home/HomeScreen';
 import HomeCategoryDetailsScreen from '../screen/home/HomeCategoryDetailsScreen';
-import SellerDetailsScreen from '../screen/home/SellerDetailsScreen';
+import ShopScreen from '../screen/sellerShop/ShopScreen';
+
 
 const HomeStackNavigator = createStackNavigator( {
         Root:{
@@ -12,8 +13,8 @@ const HomeStackNavigator = createStackNavigator( {
         HomeCategoryDetails:{
             screen:HomeCategoryDetailsScreen,
         },
-        SellerDetails:{
-            screen:SellerDetailsScreen
+        Shop:{
+            screen:ShopScreen
         }
     },
     {
