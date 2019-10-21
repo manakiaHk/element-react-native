@@ -11,7 +11,7 @@ export  default class ShopIndexView extends React.Component {
     render() {
         if(this.props.sellerDetails)
             return (
-                <View style={{backgroundColor:'#fff'}}>
+                <View style={{backgroundColor:'#fff',paddingBottom:10}}>
                     {this.renderSellerNameRow()}
                     {this.renderTickestRow()}
                     {this.renderDiscountActivityRow()}
@@ -29,11 +29,11 @@ export  default class ShopIndexView extends React.Component {
             <View>
                 {/*商家名*/}
                 <View style={{flexDirection:'row',alignItems:'center',justifyContent:'center',paddingTop:15}}>
-                    <Text style={{fontSize:17,fontWeight:'bold',textAlign:'center',color:'#333'}}>{this.props.sellerDetails.sellerName}</Text>
-                    <Text style={{fontSize:15,fontWeight:'500',textAlign:'center',color:'#333'}}>>></Text>
+                    <Text style={{fontSize:16,fontWeight:'bold',textAlign:'center',color:'#000'}}>{this.props.sellerDetails.sellerName}</Text>
+                    <Text style={{fontSize:13,fontWeight:'500',textAlign:'center',color:'#333'}}> >></Text>
                 </View>
                 {/*销量*/}
-                <Text style={{fontSize:14,color:'#666',textAlign:'center',height:30,lineHeight:30}}>
+                <Text style={{fontSize:13,color:'#666',textAlign:'center',height:30,lineHeight:30}}>
                     {`评价${this.props.sellerDetails.score}  月售${this.props.sellerDetails.monthSale}单   商家配送约${this.props.sellerDetails.sendTime}分钟`}
                 </Text>
             </View>)
@@ -48,13 +48,13 @@ export  default class ShopIndexView extends React.Component {
                             <View style={{width:'100%',paddingRight:40,flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
                                 {/*面值*/}
                                 <Text style={{color:'rgb(70,53,19)',fontSize:12}}>¥</Text>
-                                <Text style={{color:'rgb(70,53,19)',fontSize:17,fontWeight:'600'}}>{item.money}</Text>
+                                <Text style={{color:'rgb(70,53,19)',fontSize:15,fontWeight:'600'}}>{item.money}</Text>
                                 {/*使用条件*/}
-                                <Text style={{color:'rgb(70,53,19)',fontSize:13,paddingLeft:5}}>{item.condition}</Text>
+                                <Text style={{color:'rgb(70,53,19)',fontSize:12,paddingLeft:5}}>{item.condition}</Text>
 
                             </View>
                             {/*领取*/}
-                            <Text style={{width:40,textAlign:'center',color:'rgb(70,53,19)',fontSize:13,position:'absolute',right:0}}>领取</Text>
+                            <Text style={{width:40,textAlign:'center',color:'rgb(70,53,19)',fontSize:12,position:'absolute',right:0}}>领取</Text>
                             {/*两个半圆*/}
                             <View style={{backgroundColor:'#fff',borderRadius:3,width:6,height:6,position:'absolute',top:-3,right:40,}}/>
                             <View style={{backgroundColor:'#fff',borderRadius:3,width:6,height:6,position:'absolute',bottom:-3,right:40,}}/>

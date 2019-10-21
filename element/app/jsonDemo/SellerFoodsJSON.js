@@ -50,8 +50,441 @@ const recommends=[
 
 const foodsList=[
 
+    {
+        category:{name:'热销',details:'大家喜欢,吃才叫真好吃'},
+        data:[
+            {
+                title:'土豆丝',
+                subTitle:'炝炒，清炒，酸辣，醋溜，如有特别，请备注',
+                image:'https://cube.elemecdn.com/4/12/8caf13184f875e65b52c0271c2f4djpeg.jpeg',
+                monthSale:'232',
+                praise:'100%',
+                price:'20'
+            },
+            {
+                title:'鸡米芽菜',
+                subTitle:'主要原料:鸡肉',
+                image:'https://cube.elemecdn.com/7/86/533a1c25ec60ad8faa1e2996e7687jpeg.jpeg',
+                monthSale:'312',
+                praise:'100%',
+                price:'24'
+            },
+            {
+                title:'鱼香茄子',
+                subTitle:'酸辣，醋溜，如有特别，请备注',
+                image:'https://cube.elemecdn.com/2/56/205ec57c88ce99127fccf8e35d9e8jpeg.jpeg',
+                monthSale:'312',
+                praise:'100%',
+                price:'29'
+            },
+            {
+                title:'青菜原子汤',
+                subTitle:'主要原料：猪肉',
+                image:'https://cube.elemecdn.com/5/04/b8be9dd6331c081edaf8be22bcb3fjpeg.jpeg',
+                monthSale:'422',
+                praise:'100%',
+                price:'29'
+            },
+            {
+                title:'小炒肉',
+                subTitle:'',
+                image:'https://cube.elemecdn.com/b/ea/890750eeabe0b75cb4ba9c35ac3a7jpeg.jpeg',
+                monthSale:'307',
+                praise:'100%',
+                price:'22'
+            }
+        ]
+
+    },
+    {
+        category:{name:'米饭',details:'东北珍珠大米'},
+        data:[
+            {
+                title:'东北大米',
+                subTitle:'清香型',
+                image:'https://cube.elemecdn.com/e/b0/660241549ee62495d5a0c29b90da1jpeg.jpeg',
+                monthSale:'1102',
+                praise:'100%',
+                price:'1'
+            },
 
 
+        ]
+
+    },
+    {
+        category:{name:'私人订制',details:'餐具、泡菜'},
+        data:[
+
+            {
+                title: '泡菜',
+                subTitle: '开胃泡菜',
+                image: 'https://cube.elemecdn.com/a/14/cda0292fbe667bf99382c44b5d692jpeg.jpeg',
+                monthSale: '544',
+                praise: '100%',
+                price: '0'
+            }
+        ]
+
+    },
+    {
+        category:{name:'下饭菜',details:'超级下饭，别忘了点饭喔'},
+        data:[
+            {
+                title:'酸菜巴沙鱼',
+                subTitle:'酸菜超级好吃，又下饭，需要加粉丝需要单独打电话点',
+                image:'https://cube.elemecdn.com/8/f9/26bfea9920bfb95154b3a24db5d25jpeg.jpeg',
+                monthSale:'232',
+                praise:'98%',
+                price:'28'
+            },
+            {
+
+                title: '麻辣巴沙鱼',
+                subTitle: '',
+                image: 'https://cube.elemecdn.com/2/cc/0a21ea8b96d04bf7bcbe2149c3695jpeg.jpeg',
+                monthSale: '502',
+                praise: '100%',
+                price: '28'
+            },
+            {
+
+                title: '六合巴沙鱼',
+                subTitle: '主要原料：其他鱼类',
+                image: 'https://cube.elemecdn.com/0/18/64742feee464cff186ae829e5c3a3jpeg.jpeg',
+                monthSale: '402',
+                praise: '98%',
+                price: '28'
+            },
+            {
+
+                title: '老坛回锅',
+                subTitle: '主要原料：猪肉',
+                image: 'https://cube.elemecdn.com/4/fc/1ae5265b75b7ab6d77446a45b377ajpeg.jpeg',
+                monthSale: '332',
+                praise: '99%',
+                price: '22'
+            }
+
+        ]
+
+    },
+    {
+        category:{name:'特色菜',details:'常年热销招牌'},
+        data:[
+            {
+                title:'风味仔姜兔',
+                subTitle:'主要原料：兔肉',
+                image:'https://cube.elemecdn.com/0/fa/e9b2c9792c1cded05b79709f36639jpeg.jpeg',
+                monthSale:'502',
+                praise:'100%',
+                price:'27'
+            },
+
+            {
+                title: '石锅老豆腐',
+                subTitle: '',
+                image: 'https://cube.elemecdn.com/8/b6/a9fac31070326fc5286d04ee94fcbjpeg.jpeg',
+                monthSale: '242',
+                praise: '99%',
+                price: '17'
+            },
+
+            {
+                title: '干捞粉丝',
+                subTitle: '主要原料：紫薯',
+                image: 'https://cube.elemecdn.com/1/15/ccaf5cedbe2c8ef7b69eb379de910jpeg.jpeg',
+                monthSale: '302',
+                praise: '98%',
+                price: '20'
+            },
+            {
+                title: '酸汤肘子',
+                subTitle: '主要原料：猪肘肉',
+                image: 'https://cube.elemecdn.com/4/c2/80ec27f78767a15fdbfff2ae42e8djpeg.jpeg',
+                monthSale: '432',
+                praise: '100%',
+                price: '35'
+            }
+
+        ]
+
+    },
+    {
+        category:{name:'素菜',details:'农家新鲜绿色菜园蔬菜'},
+        data:[
+            {
+                title:'豇豆茄子',
+                subTitle:'',
+                image:'https://cube.elemecdn.com/f/44/f34fa529f1a0dea189e06cf7032f3jpeg.jpeg',
+                monthSale:'392',
+                praise:'98%',
+                price:'22'
+            },
+
+            {
+                title:'虎皮青椒',
+                subTitle:'',
+                image:'https://cube.elemecdn.com/f/85/b9581cda960d7f00373f65e0cc46bjpeg.jpeg',
+                monthSale:'392',
+                praise:'98%',
+                price:'22'
+            },
+            {
+                title:'土豆丝',
+                subTitle:'炝炒，清炒，酸辣，醋溜，如有特别，请备注，主要原料：土豆',
+                image:'https://cube.elemecdn.com/4/12/8caf13184f875e65b52c0271c2f4djpeg.jpeg',
+                monthSale:'392',
+                praise:'98%',
+                price:'22'
+            },
+
+        ]
+
+    },
+    {
+
+        category:{name:'蒸菜',details:'味道很好喔，点一份试试吧'},
+        data:[
+            {
+                title:'砂锅酸汤肥牛',
+                subTitle:'',
+                image:'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale:'502',
+                praise:'100%',
+                price:'27'
+            },
+            {
+                title: '砂锅酸汤肥牛',
+                subTitle: '',
+                image: 'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale: '502',
+                praise: '100%',
+                price: '27'
+            },
+            {
+                title: '砂锅酸汤肥牛',
+                subTitle: '',
+                image: 'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale: '502',
+                praise: '100%',
+                price: '27'
+            },
+            {
+                title: '砂锅酸汤肥牛',
+                subTitle: '',
+                image: 'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale: '502',
+                praise: '100%',
+                price: '27'
+            }
+
+        ]
+
+    },
+    {
+        category:{name:'热菜',details:'热菜也很棒喔'},
+        data:[
+            {
+                title:'砂锅酸汤肥牛',
+                subTitle:'',
+                image:'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale:'502',
+                praise:'100%',
+                price:'27'
+            },
+            {
+                title: '砂锅酸汤肥牛',
+                subTitle: '',
+                image: 'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale: '502',
+                praise: '100%',
+                price: '27'
+            },
+            {
+                title: '砂锅酸汤肥牛',
+                subTitle: '',
+                image: 'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale: '502',
+                praise: '100%',
+                price: '27'
+            },
+            {
+                title: '砂锅酸汤肥牛',
+                subTitle: '',
+                image: 'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale: '502',
+                praise: '100%',
+                price: '27'
+            }
+
+        ]
+
+    },
+    {
+        category:{name:'凉菜',details:'可以下单备注辣度'},
+        data:[
+            {
+                title:'砂锅酸汤肥牛',
+                subTitle:'',
+                image:'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale:'502',
+                praise:'100%',
+                price:'27'
+            },
+            {
+                title: '砂锅酸汤肥牛',
+                subTitle: '',
+                image: 'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale: '502',
+                praise: '100%',
+                price: '27'
+            },
+            {
+                title: '砂锅酸汤肥牛',
+                subTitle: '',
+                image: 'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale: '502',
+                praise: '100%',
+                price: '27'
+            },
+            {
+                title: '砂锅酸汤肥牛',
+                subTitle: '',
+                image: 'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale: '502',
+                praise: '100%',
+                price: '27'
+            }
+
+        ]
+
+    },
+    {
+
+        category:{name:'汤类',details:''},
+        data:[
+            {
+                title:'砂锅酸汤肥牛',
+                subTitle:'',
+                image:'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale:'502',
+                praise:'100%',
+                price:'27'
+            },
+            {
+                title: '砂锅酸汤肥牛',
+                subTitle: '',
+                image: 'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale: '502',
+                praise: '100%',
+                price: '27'
+            },
+            {
+                title: '砂锅酸汤肥牛',
+                subTitle: '',
+                image: 'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale: '502',
+                praise: '100%',
+                price: '27'
+            },
+            {
+                title: '砂锅酸汤肥牛',
+                subTitle: '',
+                image: 'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale: '502',
+                praise: '100%',
+                price: '27'
+            }
+
+        ]
+
+    },
+    {
+        category:{name:'冒菜',details:''},
+        data:[
+            {
+                title:'砂锅酸汤肥牛',
+                subTitle:'',
+                image:'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale:'502',
+                praise:'100%',
+                price:'27'
+            },
+            {
+                title: '砂锅酸汤肥牛',
+                subTitle: '',
+                image: 'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale: '502',
+                praise: '100%',
+                price: '27'
+            },
+            {
+                title: '砂锅酸汤肥牛',
+                subTitle: '',
+                image: 'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale: '502',
+                praise: '100%',
+                price: '27'
+            },
+            {
+                title: '砂锅酸汤肥牛',
+                subTitle: '',
+                image: 'https://cube.elemecdn.com/c/fa/757bbf502939274c8029b4addac29jpeg.jpeg',
+                monthSale: '502',
+                praise: '100%',
+                price: '27'
+            }
+
+        ]
+
+    },
+    {
+
+        category:{name:'小吃',details:'本店特色小吃'},
+        data:[
+            {
+                title:'红糖糍粑',
+                subTitle:'主要原料：糯米',
+                image:'https://cube.elemecdn.com/3/f4/1304184db98d8bbee60e9053522a5jpeg.jpeg',
+                monthSale:'120',
+                praise:'98%',
+                price:'27'
+            },
+            {
+                title:'麻元',
+                subTitle:'主要原料：糯米',
+
+                image:'https://cube.elemecdn.com/6/24/aebd7662376771affe90a25d78730jpeg.jpeg',
+                monthSale:'90',
+                praise:'100%',
+                price:'27'
+            }
 
 
+        ]
+
+    },
+    {
+        category:{name:'饮料',details:'饭后一杯饮料更配喔'},
+        data:[
+            {
+                title:'酸角汁250ml',
+                subTitle:'',
+                image:'https://cube.elemecdn.com/b/a0/32cef878a8b1f5717054c92a2110ajpeg.jpeg',
+                monthSale:'32',
+                praise:'100%',
+                price:'5'
+            },
+            {
+                title: '王老吉330ml',
+                subTitle: '',
+                image: 'https://cube.elemecdn.com/6/5c/9cd608bb085237cad400e95c465f4jpeg.jpeg',
+                monthSale: '50',
+                praise: '98%',
+                price: '6'
+            }
+        ]
+
+    }
 ];

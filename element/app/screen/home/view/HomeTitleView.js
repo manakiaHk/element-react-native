@@ -15,7 +15,7 @@ export  default class HomeTitleView extends React.Component {
                 justifyContent:'center',
                 alignItems:'center',}}>
                 <View style={{height:1,width:35,backgroundColor:'#999'}}/>
-                <Text style={{fontSize:16,color:'#000',marginLeft:5,marginRight:5}}>{this.props.title}</Text>
+                <Text style={{fontSize:16,fontWeight:'500',color:'#000',marginLeft:5,marginRight:5}}>{this.props.title}</Text>
                 <View style={{height:1,width:35,backgroundColor:'#999'}}/>
             </View>
         );

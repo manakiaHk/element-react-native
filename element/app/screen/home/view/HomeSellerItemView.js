@@ -41,7 +41,7 @@ export  default class HomeSellerItemView extends React.Component {
                                 this.props.model.isBrand
                                 &&<Text style={{backgroundColor:'rgba(254,232,28,1)',color:'#503D15',fontSize:13,padding:3,borderRadius:5}}>品牌</Text>
                             }
-                            <Text style={{color:'#000',fontSize:15,marginLeft:5}}>{this.props.model.sellerName}</Text>
+                            <Text style={{color:'#000',fontSize:16,fontWeight:'500',marginLeft:5}}>{this.props.model.sellerName}</Text>
                         </View>
                         <View style={{flexDirection:'row',alignItems:'center',height:'33.3%'}}>
                             <Image style={{width:16,height:16,marginRight:5}} source={require('../../../../res/icons/ic-wujiaoxing.png')}/>

@@ -46,7 +46,6 @@ export  default  class MineScreen extends React.Component {
                         redPcketItemPress={(item,index)=>{this.redPcketItemPress(item,index)}}
                     />}
                     ListFooterComponent={<MineListFooterView/>}
-
                 />
 
             </View>

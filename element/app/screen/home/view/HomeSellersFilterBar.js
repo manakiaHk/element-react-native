@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
     itemText:{
         color:'#333',
         fontSize:14,
+        fontWeight:'500',
         textAlign:'center',
         height:40,
         lineHeight:40,
