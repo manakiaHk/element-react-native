@@ -1,5 +1,5 @@
 
-import {Dimensions,Platform,PixelRatio,NativeModules} from  'react-native';
+import {Dimensions,Platform,PixelRatio,NativeModules,StatusBar} from  'react-native';
 import WCProgressHUD from "../../app/components/ProgressHUD";
 import Strings from './Strings'
 import Colors from './Colors'
@@ -21,6 +21,7 @@ global.Device = {
         return  height;
     },
 };
+global.text_yy = 'text_yy';
 
 global.NavigationHeight =  44;
 global.statusBarManager = {
@@ -43,3 +44,5 @@ global.storage = new Storage({
     defaultExpires: null,
     enableCache: true,
 });
+
+

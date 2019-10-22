@@ -3,6 +3,7 @@ import {
     View,
     ScrollView,
     StyleSheet,
+    SafeAreaView,
     StatusBar,
     Text,
 } from 'react-native';
@@ -32,14 +33,19 @@ export  default class ShopScreen extends React.Component{
             recommends:[],
             foods:[],
             shopTrolleyFoods:[],
-            shopTrolleyData:null,
-
+            shopTrolleyData:{
+                badge:0,   //角标
+                shippingFee:'', //配送费
+                total:0,   //总价格
+                sendOutUp:0  ///起送价
+            },
         };
         this.setTabHorizontalScrollRef = element => {
             this.tabHorizontalScroll = element;
         };
 
     }
+
 
     static navigationOptions =  ({ navigation }) => {
         ///*****导航栏透明 需要同时设置 headerTransparent:true 和 backgroundColor:'rgba(255,255,255,0)' 才有效
@@ -54,13 +60,14 @@ export  default class ShopScreen extends React.Component{
         };
     };
     render () {
+
         ///推荐商家栏高度
         this.RecommendsHeight = this.state.recommends&&this.state.recommends.length>0?170:0;
         ///商品列表栏高度
         this.FoodListHeight =  Device.ScreenHeight-global.NavigationHeight-this.state.statusBarHeight-TabsBarHeight;
         return (
 
-            <View style={{flex: 1, backgroundColor:Colors.ScreenBackgroundColor,position:''}}>
+            <View style={{flex: 1, backgroundColor:Colors.ScreenBackgroundColor}}>
                 {/*状态栏*/}
                 <StatusBar barStyle={this.state.statusBarStyle} />
                 {/*加一个导航栏背景*/}
@@ -153,8 +160,11 @@ export  default class ShopScreen extends React.Component{
 
                     </ScrollView>
                 </ScrollView>
-                {/*都不工具栏*/}
-                {this.state.tabsIndex===0&&<ShopTrolleyBar data={this.state.shopTrolleyData} style={{zIndex:1000,position:'absolute',left:0,bottom:0,height:55}}/>}
+                {
+                    /*工具栏*/
+                    this.state.tabsIndex===0&&
+                    <ShopTrolleyBar data={this.state.shopTrolleyData} style={{zIndex:1000,position:'absolute',left:0,bottom:0,height:55}}/>
+                }
             </View>
         );
     }
@@ -166,17 +176,29 @@ export  default class ShopScreen extends React.Component{
        let item = this.state.recommends[index];
         if(item.buyCount&&item.buyCount>0){
             item.buyCount-- ;
+
         }else {
             item.buyCount=0;
         }
 
+
         this.setState((state,props)=>({
+            shopTrolleyData:{
+                total:state.shopTrolleyData.total-parseFloat(item.price),
+                badge:state.shopTrolleyData.badge-1,
+                shippingFee:parseFloat(this.props.navigation.getParam('shippingFee')),
+                sendOutUp:parseFloat(this.props.navigation.getParam('sendOutUp')),
+            },
             recommends:state.recommends
-        }))
+        }));
+
+
+
     }
     ///商家推荐-加点击
     _recommendsAddButtonOnPress(index){
         let item = this.state.recommends[index];
+
         if(!item.buyCount){
             item.buyCount=1;
         }else {
@@ -184,8 +206,15 @@ export  default class ShopScreen extends React.Component{
         }
 
         this.setState((state,props)=>({
+            shopTrolleyData:{
+                total:state.shopTrolleyData.total+parseFloat(item.price),
+                badge:state.shopTrolleyData.badge+1,
+                shippingFee:parseFloat(this.props.navigation.getParam('shippingFee')),
+                sendOutUp:parseFloat(this.props.navigation.getParam('sendOutUp')),
+            },
             recommends:state.recommends
-        }))
+        }));
+
     }
     /// food列表-减点击
     _foodListReduceButtonOnPress(index, section){
@@ -198,8 +227,17 @@ export  default class ShopScreen extends React.Component{
         }
 
         this.setState((state,props)=>({
+
+        }));
+        this.setState((state,props)=>({
+            shopTrolleyData:{
+                total:state.shopTrolleyData.total-parseFloat(item.price),
+                badge:state.shopTrolleyData.badge-1,
+                shippingFee:parseFloat(this.props.navigation.getParam('shippingFee')),
+                sendOutUp:parseFloat(this.props.navigation.getParam('sendOutUp')),
+            },
             foods:state.foods
-        }))
+        }));
 
 
     }
@@ -212,17 +250,20 @@ export  default class ShopScreen extends React.Component{
             item.buyCount++;
         }
 
+
         this.setState((state,props)=>({
+            shopTrolleyData:{
+                total:state.shopTrolleyData.total+parseFloat(item.price),
+                badge:state.shopTrolleyData.badge+1,
+                shippingFee:parseFloat(this.props.navigation.getParam('shippingFee')),
+                sendOutUp:parseFloat(this.props.navigation.getParam('sendOutUp')),
+
+            },
             foods:state.foods
-        }))
-
-
-    }
-
-    processShopTrolley() {
-        
+        }));
 
     }
+
 
     ///tabs点击
     tabsPressed(index){
@@ -260,14 +301,17 @@ export  default class ShopScreen extends React.Component{
                 statusBarHeight:height
             });
         });
-        ///商家信息
+        ///初始数据
         this.setState({
             sellerDetails:this.props.navigation.state.params,
-        });
-        ///获取点餐
-        this.setState({
             recommends:queryRecommends(),
-            foods:queryFoods()
+            foods:queryFoods(),
+            shopTrolleyData:{
+                total:0,
+                badge:0,
+                shippingFee:parseFloat(this.props.navigation.getParam('shippingFee')),
+                sendOutUp:0
+            }
         });
 
     }

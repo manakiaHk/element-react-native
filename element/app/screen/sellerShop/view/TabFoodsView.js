@@ -6,7 +6,6 @@ import {
     SectionList,
     FlatList,
     ScrollView,
-    TouchableOpacity,
     TouchableHighlight
 } from 'react-native';
 

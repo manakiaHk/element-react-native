@@ -15,7 +15,7 @@ const sellers = [{
         score:'4.3',
         monthSale:'1120',
         sendOutUp:'15.00',
-        shippingFee:'0.00',
+        shippingFee:'5.00',
         distance:'2km',
         sendTime:'35分钟',
         isBrand:true,

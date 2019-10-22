@@ -18,18 +18,6 @@ export  default class HomeSearchHeader extends React.Component {
             statusBarHeight:0,
             searchText:''
         }
-        ///获取转态栏高度
-        if (Platform.OS==='ios'){
-            NativeModules.StatusBarManager.getHeight(statusBarHeight => {
-                this.setState({
-                    statusBarHeight:statusBarHeight.height
-                });
-            });
-        }else {
-            this.setState({
-                statusBarHeight:StatusBar.currentHeight
-            });
-        }
     }
     render() {
         return (
@@ -50,6 +38,13 @@ export  default class HomeSearchHeader extends React.Component {
                 }
             </View>
         );
+    }
+    componentDidMount() {
+        global.statusBarManager.statusHeight((height)=>{
+            this.setState({
+                statusBarHeight:height
+            });
+        });
     }
     onChangeText(text){
 

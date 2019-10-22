@@ -9,9 +9,7 @@ import {
 export  default class TabSellerInfoView extends React.Component {
     render() {
         return (
-            <View style={this.props.style}>
-
-            </View>
+            <View style={this.props.style}/>
         );
     }
 }
