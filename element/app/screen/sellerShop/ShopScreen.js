@@ -182,12 +182,13 @@ export  default class ShopScreen extends React.Component{
         }
 
 
+        ///更新状态
         this.setState((state,props)=>({
             shopTrolleyData:{
                 total:state.shopTrolleyData.total-parseFloat(item.price),
                 badge:state.shopTrolleyData.badge-1,
-                shippingFee:parseFloat(this.props.navigation.getParam('shippingFee')),
-                sendOutUp:parseFloat(this.props.navigation.getParam('sendOutUp')),
+                shippingFee:parseFloat(state.sellerDetails.shippingFee),
+                sendOutUp:parseFloat(state.sellerDetails.sendOutUp),
             },
             recommends:state.recommends
         }));
@@ -205,12 +206,13 @@ export  default class ShopScreen extends React.Component{
             item.buyCount++;
         }
 
+        ///更新状态
         this.setState((state,props)=>({
             shopTrolleyData:{
                 total:state.shopTrolleyData.total+parseFloat(item.price),
                 badge:state.shopTrolleyData.badge+1,
-                shippingFee:parseFloat(this.props.navigation.getParam('shippingFee')),
-                sendOutUp:parseFloat(this.props.navigation.getParam('sendOutUp')),
+                shippingFee:parseFloat(state.sellerDetails.shippingFee),
+                sendOutUp:parseFloat(state.sellerDetails.sendOutUp),
             },
             recommends:state.recommends
         }));
@@ -225,16 +227,13 @@ export  default class ShopScreen extends React.Component{
         }else {
             item.buyCount=0;
         }
-
-        this.setState((state,props)=>({
-
-        }));
+        ///更新状态
         this.setState((state,props)=>({
             shopTrolleyData:{
                 total:state.shopTrolleyData.total-parseFloat(item.price),
                 badge:state.shopTrolleyData.badge-1,
-                shippingFee:parseFloat(this.props.navigation.getParam('shippingFee')),
-                sendOutUp:parseFloat(this.props.navigation.getParam('sendOutUp')),
+                shippingFee:parseFloat(state.sellerDetails.shippingFee),
+                sendOutUp:parseFloat(state.sellerDetails.sendOutUp),
             },
             foods:state.foods
         }));
@@ -251,12 +250,13 @@ export  default class ShopScreen extends React.Component{
         }
 
 
+        ///更新状态
         this.setState((state,props)=>({
             shopTrolleyData:{
                 total:state.shopTrolleyData.total+parseFloat(item.price),
                 badge:state.shopTrolleyData.badge+1,
-                shippingFee:parseFloat(this.props.navigation.getParam('shippingFee')),
-                sendOutUp:parseFloat(this.props.navigation.getParam('sendOutUp')),
+                shippingFee:parseFloat(state.sellerDetails.shippingFee),
+                sendOutUp:parseFloat(state.sellerDetails.sendOutUp),
 
             },
             foods:state.foods
@@ -267,8 +267,9 @@ export  default class ShopScreen extends React.Component{
 
     ///tabs点击
     tabsPressed(index){
+        ///更新状态
         this.setState({tabsIndex:index});
-        //切换内容
+        //切换tab内容
         this.tabHorizontalScroll.scrollTo({x: index*Device.ScreenWidth, y: 0, animated: true});
     }
     ///主srcoll滑动监听
@@ -276,15 +277,18 @@ export  default class ShopScreen extends React.Component{
         this.props.navigation.setParams({
             headerAlpha:y>global.NavigationHeight+this.state.statusBarHeight ?1:0,
         });
-        ///主srcoll 滑到底部时 允许foodList滑动 反之不允许 有浮点小数误差用1补偿
+        /// 有浮点小数误差用1补偿
+        let  distance =  height-Device.ScreenHeight-1;
+        ///bool 量
+        let  foodListScrollEnabled =  y>=distance;
+        let  tabsBarFixed =  y>=distance-this.RecommendsHeight;
 
-        let distance =  height-Device.ScreenHeight-1;
-
-        this.setState({foodListScrollEnabled:y>=distance});
-
-        this.setState({tabsBarFixed:y>=distance-this.RecommendsHeight});
-
-        y>=distance&&this.foodList.scrollToLocation({animated: true,itemIndex:0,sectionIndex:0,viewOffset:0,viewPosition:0});
+        ///主srcoll 滑到底部时 允许foodList滑动 反之不允许
+        this.setState({foodListScrollEnabled:foodListScrollEnabled});
+        ///tabs 吸顶固定
+        this.setState({tabsBarFixed:tabsBarFixed});
+        /// 主srcoll 滑到底部时 foodList 让滚动到顶部
+        foodListScrollEnabled&&this.foodList.scrollToLocation({animated: true,itemIndex:0,sectionIndex:0,viewOffset:0,viewPosition:0});
 
     }
     componentDidMount() {
@@ -301,7 +305,7 @@ export  default class ShopScreen extends React.Component{
                 statusBarHeight:height
             });
         });
-        ///初始数据
+        ///初始数据  实际开发中json数据使用网络请求实际数据
         this.setState({
             sellerDetails:this.props.navigation.state.params,
             recommends:queryRecommends(),

@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="560ee7d0-9df2-4f35-89a8-3e80a3656cc7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/element/app/jsonDemo/SellerFoodsJSON.js" afterPath="$PROJECT_DIR$/element/app/jsonDemo/SellerFoodsJSON.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/element/app/jsonDemo/SellersJSON.js" afterPath="$PROJECT_DIR$/element/app/jsonDemo/SellersJSON.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/element/app/screen/home/view/HomeSearchHeader.js" afterPath="$PROJECT_DIR$/element/app/screen/home/view/HomeSearchHeader.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/element/app/screen/sellerShop/ShopScreen.js" afterPath="$PROJECT_DIR$/element/app/screen/sellerShop/ShopScreen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/element/app/screen/sellerShop/view/ShopHeaderView.js" afterPath="$PROJECT_DIR$/element/app/screen/sellerShop/view/ShopHeaderView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/element/app/screen/sellerShop/view/ShopTrolleyBar.js" afterPath="$PROJECT_DIR$/element/app/screen/sellerShop/view/ShopTrolleyBar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/element/app/screen/sellerShop/view/TabFoodsView.js" afterPath="$PROJECT_DIR$/element/app/screen/sellerShop/view/TabFoodsView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/element/app/screen/sellerShop/view/TabSellerInfoView.js" afterPath="$PROJECT_DIR$/element/app/screen/sellerShop/view/TabSellerInfoView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/element/res/values/Globals.js" afterPath="$PROJECT_DIR$/element/res/values/Globals.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,11 +19,58 @@
       <file leaf-file-name="ShopScreen.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/element/app/screen/sellerShop/ShopScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="69" column="79" lean-forward="false" selection-start-line="69" selection-start-column="79" selection-end-line="69" selection-end-column="79" />
+            <state relative-caret-position="1112">
+              <caret line="195" column="0" lean-forward="true" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TabFoodsView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/element/app/screen/sellerShop/view/TabFoodsView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="38" column="23" lean-forward="true" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#1226#3117#0" expanded="false" />
+                <element signature="e#1475#3093#0" expanded="false" />
+                <element signature="e#3185#4326#0" expanded="false" />
+                <element signature="e#4362#4525#0" expanded="false" />
+                <element signature="e#4568#6674#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DiscoverScreen.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/element/app/screen/discover/DiscoverScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1113">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WelcomeScreen.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/element/app/screen/WelcomeScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SellersJSON.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/element/app/jsonDemo/SellersJSON.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,6 +108,8 @@
       <find>StatusBar</find>
       <find>scrollTo</find>
       <find>position</find>
+      <find>state.details</find>
+      <find>state.sellerDetails</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -86,8 +127,8 @@
         <option value="$PROJECT_DIR$/element/res/values/Globals.js" />
         <option value="$PROJECT_DIR$/element/app/screen/home/HomeScreen.js" />
         <option value="$PROJECT_DIR$/element/app/screen/home/view/HomeSearchHeader.js" />
-        <option value="$PROJECT_DIR$/element/app/screen/sellerShop/ShopScreen.js" />
         <option value="$PROJECT_DIR$/element/app/screen/sellerShop/view/ShopHeaderView.js" />
+        <option value="$PROJECT_DIR$/element/app/screen/sellerShop/ShopScreen.js" />
       </list>
     </option>
   </component>
@@ -108,8 +149,8 @@
     <handled-path value="$PROJECT_DIR$/element/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="80" />
-    <option name="y" value="151" />
+    <option name="x" value="38" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="739" />
   </component>
@@ -144,7 +185,39 @@
               <item name="element-react-native" type="b2602c69:ProjectViewProjectNode" />
               <item name="element-react-native" type="462c0819:PsiDirectoryNode" />
               <item name="element" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="element-react-native" type="b2602c69:ProjectViewProjectNode" />
+              <item name="element-react-native" type="462c0819:PsiDirectoryNode" />
+              <item name="element" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="screen" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="element-react-native" type="b2602c69:ProjectViewProjectNode" />
+              <item name="element-react-native" type="462c0819:PsiDirectoryNode" />
+              <item name="element" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="screen" type="462c0819:PsiDirectoryNode" />
+              <item name="discover" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="element-react-native" type="b2602c69:ProjectViewProjectNode" />
+              <item name="element-react-native" type="462c0819:PsiDirectoryNode" />
+              <item name="element" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="screen" type="462c0819:PsiDirectoryNode" />
+              <item name="sellerShop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="element-react-native" type="b2602c69:ProjectViewProjectNode" />
+              <item name="element-react-native" type="462c0819:PsiDirectoryNode" />
+              <item name="element" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="screen" type="462c0819:PsiDirectoryNode" />
+              <item name="sellerShop" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -190,18 +263,17 @@
       <option name="presentableId" value="Default" />
       <updated>1571717910477</updated>
       <workItem from="1571717913374" duration="13129000" />
-      <workItem from="1571753775104" duration="110000" />
+      <workItem from="1571753775104" duration="1611000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13239000" />
+    <option name="totallyTimeSpent" value="14740000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="80" y="151" width="1280" height="739" extended-state="0" />
-    <editor active="true" />
+    <frame x="38" y="23" width="1280" height="739" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22239873" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35186657" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -246,7 +318,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -265,7 +339,7 @@
         <state relative-caret-position="1575">
           <caret line="123" column="7" lean-forward="false" selection-start-line="123" selection-start-column="7" selection-end-line="127" selection-end-column="11" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -275,7 +349,7 @@
         <state relative-caret-position="750">
           <caret line="56" column="112" lean-forward="false" selection-start-line="56" selection-start-column="104" selection-end-line="56" selection-end-column="112" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -285,7 +359,7 @@
         <state relative-caret-position="435">
           <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
             <marker date="1571749451451" expanded="true" signature="1482:1500" ph="{...}" />
           </folding>
         </state>
@@ -334,7 +408,7 @@
         <state relative-caret-position="630">
           <caret line="49" column="35" lean-forward="false" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -372,13 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="43" lean-forward="true" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/element/app/screen/WelcomeScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -441,6 +508,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="132" column="20" lean-forward="false" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -465,24 +533,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/element/app/jsonDemo/SellersJSON.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/element/app/screen/sellerShop/view/TabSellerInfoView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/element/app/screen/sellerShop/view/TabFoodsView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -501,7 +555,7 @@
         <state relative-caret-position="630">
           <caret line="49" column="35" lean-forward="false" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -563,7 +617,7 @@
         <state relative-caret-position="105">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="e#20#61#0" expanded="true" />
+            <element signature="e#20#61#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -581,7 +635,7 @@
         <state relative-caret-position="372">
           <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
             <marker date="1571749451451" expanded="true" signature="1482:1500" ph="{...}" />
           </folding>
         </state>
@@ -592,7 +646,7 @@
         <state relative-caret-position="193">
           <caret line="123" column="7" lean-forward="false" selection-start-line="123" selection-start-column="7" selection-end-line="127" selection-end-column="11" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -602,15 +656,54 @@
         <state relative-caret-position="145">
           <caret line="56" column="112" lean-forward="false" selection-start-line="56" selection-start-column="104" selection-end-line="56" selection-end-column="112" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/element/app/jsonDemo/SellersJSON.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/element/app/screen/sellerShop/view/TabFoodsView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="38" column="23" lean-forward="true" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#1226#3117#0" expanded="false" />
+            <element signature="e#1475#3093#0" expanded="false" />
+            <element signature="e#3185#4326#0" expanded="false" />
+            <element signature="e#4362#4525#0" expanded="false" />
+            <element signature="e#4568#6674#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/element/app/screen/discover/DiscoverScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1113">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/element/app/screen/WelcomeScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/element/app/screen/sellerShop/ShopScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="69" column="79" lean-forward="false" selection-start-line="69" selection-start-column="79" selection-end-line="69" selection-end-column="79" />
+        <state relative-caret-position="1112">
+          <caret line="195" column="0" lean-forward="true" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
