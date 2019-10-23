@@ -56,6 +56,7 @@ export  default class TabFoodsView extends React.Component {
                     <ScrollView
                         showsHorizontalScrollIndicator={false}
                         horizontal={true}
+                        nestedScrollEnabled={true}
                         style={{flexDirection:'row',height:RecommendHeight-TitleHeight}}>
                         {
                             this.props.recommends.map((item,index)=>
@@ -96,10 +97,12 @@ export  default class TabFoodsView extends React.Component {
                         <Text style={{fontSize:12,color:'#333',fontWeight:'500'}}>{item.category.name}</Text>
                     </TouchableHighlight>}
                     showsHorizontalScrollIndicator={false}
+                    nestedScrollEnabled={true}
                     keyExtractor={(item, index)=>index+''}
                     ItemSeparatorComponent = {()=>(<View style={{height:1,backgroundColor:'#fff'}}>
                         <View style={{height:0.5,backgroundColor:'#eee'}}/>
                     </View>)}
+                     ListFooterComponent={({section}) => <View style={{backgroundColor:'#eee',height:15}}/>}
                 />
             );
 
@@ -125,6 +128,7 @@ export  default class TabFoodsView extends React.Component {
                 sections={this.props.foods}
                 keyExtractor={(item, index)=>index+''}
                 scrollEnabled={this.props.foodListScrollEnabled}
+                nestedScrollEnabled={true}
                 onScroll={(e)=>{
                     this.props.foodListOnScroll && this.props.foodListOnScroll(e);
                     ///析构
@@ -150,7 +154,7 @@ export  default class TabFoodsView extends React.Component {
                                              }}/>
                 }}
                 ///iOS可以设置contentInset，但是android 没有这个api,为了兼顾，就设置一个footer
-                ListFooterComponent={({section}) => <View style={{backgroundColor:'#fff',height:25}}/>}
+                ListFooterComponent={({section}) => <View style={{backgroundColor:'#fff',height:15}}/>}
             />
         );
     }

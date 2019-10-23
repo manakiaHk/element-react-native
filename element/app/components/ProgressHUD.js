@@ -59,6 +59,7 @@ export default class WCProgressHUD extends   React.Component {
                 return(
                     <View style={styles.loadingbackground}>
                         <View style={{
+                            zIndex:999,
                             justifyContent:'center',alignItems:'center',
                             width:this.props.plateWidth,
                             height:this.props.plateHeight,

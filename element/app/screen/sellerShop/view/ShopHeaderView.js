@@ -18,7 +18,7 @@ export  default class ShopHeaderView extends React.Component {
     render() {
         let width =  global.Device.ScreenWidth;
         let photoOverBottom= 15;
-        let height =  this.state.statusBarHeight+NavigationHeight+100;
+        let height =  this.state.statusBarHeight+Device.NavigationBarHeight+100;
         let photoWidth = 90;
 
         return (

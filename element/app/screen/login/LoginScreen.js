@@ -36,53 +36,57 @@ export default class LoginScreen extends   React.Component {
     };
     render() {
         return (
-            <ScrollView style={styles.scroll}>
-                <StatusBar barStyle="light-content" />
-                <View style={styles.account}>
-                    <TextInput
-                        style = {styles.textInput}
-                        onChangeText={(text) => this.setState({account:text})}
-                        value={this.state.account}
-                        placeholder={'手机号码'}
-                    />
-                    <View style={styles.inputLine}/>
-                </View>
-                <View style={styles.password}>
-                    <TextInput
-                        style = {styles.textInput}
-                        secureTextEntry={true}
-                        onChangeText={(text) => this.setState({password:text})}
-                        value={this.state.password}
-                        placeholder={'登录密码'}
-                    />
-                    <View/>
-                </View>
+            <View style={{flex:1}}>
+                <ScrollView style={styles.scroll}>
+                    <StatusBar barStyle="light-content" />
+                    <View style={styles.account}>
+                        <TextInput
+                            style = {styles.textInput}
+                            onChangeText={(text) => this.setState({account:text})}
+                            value={this.state.account}
+                            placeholder={'手机号码'}
+                        />
+                        <View style={styles.inputLine}/>
+                    </View>
+                    <View style={styles.password}>
+                        <TextInput
+                            style = {styles.textInput}
+                            secureTextEntry={true}
+                            onChangeText={(text) => this.setState({password:text})}
+                            value={this.state.password}
+                            placeholder={'登录密码'}
+                        />
+                        <View/>
+                    </View>
 
-                <View style={styles.userNotice}>
-                    <Text style={{color:'#666', fontSize:12}}>温馨提示:登录前请阅读</Text>
+                    <View style={styles.userNotice}>
+                        <Text style={{color:'#666', fontSize:12}}>温馨提示:登录前请阅读</Text>
+                        <TouchableOpacity
+                            onPress={()=>this._userProtocol()}
+                            activeOpacity={0.5}
+                        >
+                            <Text style={{color:Colors.ThemeColor,fontSize:12}}>《用户协议》</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={()=>this._userPrivacy()}
+                            activeOpacity={0.5}
+                        >
+                            <Text style={{color:Colors.ThemeColor,fontSize:12}}>《隐私政策》</Text>
+                        </TouchableOpacity>
+
+                    </View>
                     <TouchableOpacity
-                        onPress={()=>this._userProtocol()}
+                        style={styles.loginButton}
+                        onPress={()=>this._login()}
                         activeOpacity={0.5}
                     >
-                        <Text style={{color:Colors.ThemeColor,fontSize:12}}>《用户协议》</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={()=>this._userPrivacy()}
-                        activeOpacity={0.5}
-                    >
-                        <Text style={{color:Colors.ThemeColor,fontSize:12}}>《隐私政策》</Text>
+                        <Text style={{textAlign:'center', color:'#fff',fontSize:15}}>登录</Text>
                     </TouchableOpacity>
 
-                </View>
-                <TouchableOpacity
-                    style={styles.loginButton}
-                    onPress={()=>this._login()}
-                    activeOpacity={0.5}
-                >
-                    <Text style={{textAlign:'center', color:'#fff',fontSize:15}}>登录</Text>
-                </TouchableOpacity>
+                </ScrollView>
                 <WCProgressHUD indicatorColor={'#000'}/>
-            </ScrollView>
+            </View>
+
         );
     }
 

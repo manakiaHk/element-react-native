@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-    View,
-    ScrollView,
-    StyleSheet,
-    SafeAreaView,
-    StatusBar,
-    Text,
-} from 'react-native';
+import {View,ScrollView,StyleSheet,SafeAreaView,StatusBar,Text,} from 'react-native';
 
 import ShopHeaderView from './view/ShopHeaderView';
 import ShopIndexView from './view/ShopIndexView';
@@ -49,11 +42,11 @@ export  default class ShopScreen extends React.Component{
 
     static navigationOptions =  ({ navigation }) => {
         ///*****导航栏透明 需要同时设置 headerTransparent:true 和 backgroundColor:'rgba(255,255,255,0)' 才有效
-        let alpha = navigation.getParam('headerAlpha')?navigation.getParam('headerAlpha'):0;
+        let headerOpaque = navigation.getParam('headerOpaque');
         return {
             headerTransparent:true,
-            headerTintColor: alpha===0?'#fff':'#333',
-            title:alpha===1&&navigation.getParam('sellerName'),
+            headerTintColor: headerOpaque?'#333':'#fff',
+            title:headerOpaque&&navigation.getParam('sellerName'),
             headerStyle:{
                 backgroundColor:`rgba(255,255,255,0)`
             },
@@ -64,8 +57,19 @@ export  default class ShopScreen extends React.Component{
         ///推荐商家栏高度
         this.RecommendsHeight = this.state.recommends&&this.state.recommends.length>0?170:0;
         ///商品列表栏高度
-        this.FoodListHeight =  Device.ScreenHeight-global.NavigationHeight-this.state.statusBarHeight-TabsBarHeight;
+        this.FoodListHeight =  Device.ScreenHeight-Device.NavigationBarHeight-this.state.statusBarHeight-TabsBarHeight;
+
+
+        this.HorizontalScrollHeight = Device.ScreenHeight-Device.NavigationBarHeight-this.state.statusBarHeight-TabsBarHeight + this.RecommendsHeight;
+
+        if(Device.OS==='android'){
+            this.HorizontalScrollHeight-=this.state.statusBarHeight;
+            this.FoodListHeight-=this.state.statusBarHeight;
+        }
+
         return (
+
+
 
             <View style={{flex: 1, backgroundColor:Colors.ScreenBackgroundColor}}>
                 {/*状态栏*/}
@@ -73,14 +77,14 @@ export  default class ShopScreen extends React.Component{
                 {/*加一个导航栏背景*/}
                 {/*控制导航背景颜色，在这里加是有原因的,直接在navigationOptions控制背景色
                    会出现在透明与非透明交界处出现内容顶部偏移跳动,在这里加体验极佳*/}
-                <View style={{zIndex:99,position:'absolute',top:0,left:0,right:0,height:global.NavigationHeight+this.state.statusBarHeight,
-                    backgroundColor:`rgba(255,255,255,${this.props.navigation.getParam('headerAlpha')})`}}/>
+                <View style={{zIndex:99,position:'absolute',top:0,left:0,right:0,height:Device.NavigationBarHeight+this.state.statusBarHeight,
+                    backgroundColor:`rgba(255,255,255,${this.props.navigation.getParam('headerOpaque')?1:0})`}}/>
 
                 {/*tabs吸顶*/}
                 {
                     this.state.tabsBarFixed&&
                     <ShopTabs
-                        style={{zIndex:999,height:TabsBarHeight,position:'absolute',left:0,top:this.state.statusBarHeight+NavigationHeight,right:0}}
+                        style={{zIndex:999,height:TabsBarHeight,position:'absolute',left:0,top:this.state.statusBarHeight+Device.NavigationBarHeight,right:0}}
                         items={['点餐','评价','商家']}
                         currentIndex={this.state.tabsIndex}
                         tabsPressed={(index)=>{this.tabsPressed(index)}}
@@ -114,16 +118,21 @@ export  default class ShopScreen extends React.Component{
 
                     {/*ShopTabs下的内容:水平-scroll*/}
                     <ScrollView
+
                         ref={this.setTabHorizontalScrollRef}
-                        style={{flexDirection:'row',height:Device.ScreenHeight-NavigationHeight-this.state.statusBarHeight-TabsBarHeight + this.RecommendsHeight}}
+                        style={{flexDirection:'row',height:this.HorizontalScrollHeight}}
+                        scrollEnabled={this.state.tabsScrollScrollEnabled}
                         pagingEnabled={true}
                         horizontal={true}
                         showsHorizontalScrollIndicator={false}
                         bounces={false}
                         onMomentumScrollEnd={({nativeEvent:{contentOffset: { x, y },layoutMeasurement: { height, width }}})=>{
                             ///滚动动画结束，切换tabs
-                            let index = x/width;
+
+
+                            let index = parseInt(x/width+0.01) ; ///消除浮点误差
                             this.setState({tabsIndex:index});
+
                         }}
                     >
                         {/*点餐*/}
@@ -136,6 +145,7 @@ export  default class ShopScreen extends React.Component{
                                 ///滑到顶部禁止滚动
                                 this.setState({foodListScrollEnabled:y>0});
                             }}
+
                             recommends={this.state.recommends}
                             foods={this.state.foods}
                             ///获取foodList的引用
@@ -216,7 +226,6 @@ export  default class ShopScreen extends React.Component{
             },
             recommends:state.recommends
         }));
-
     }
     /// food列表-减点击
     _foodListReduceButtonOnPress(index, section){
@@ -274,21 +283,37 @@ export  default class ShopScreen extends React.Component{
     }
     ///主srcoll滑动监听
     mainOnScroll({ nativeEvent: { contentOffset: { x, y },contentSize: { height, width }}}){
+
+        ///导航头部不透明
+        let  headerOpaque = y>Device.NavigationBarHeight+this.state.statusBarHeight;
+
         this.props.navigation.setParams({
-            headerAlpha:y>global.NavigationHeight+this.state.statusBarHeight ?1:0,
+            headerOpaque:headerOpaque
         });
-        /// 有浮点小数误差用1补偿
+
         let  distance =  height-Device.ScreenHeight-1;
+
+        if (global.Device.OS==='android'){
+            distance =  height-(Device.ScreenHeight -this.state.statusBarHeight)-1;
+        }
+
+        this.setState({
+            statusBarStyle:headerOpaque?'dark-content':'light-content'
+        });
+        
+        /// 有浮点小数误差用1补偿
+        
         ///bool 量
         let  foodListScrollEnabled =  y>=distance;
         let  tabsBarFixed =  y>=distance-this.RecommendsHeight;
-
+        console.log(this.state.statusBarHeight);
+        console.log(distance+'----->'+y);
         ///主srcoll 滑到底部时 允许foodList滑动 反之不允许
         this.setState({foodListScrollEnabled:foodListScrollEnabled});
         ///tabs 吸顶固定
         this.setState({tabsBarFixed:tabsBarFixed});
         /// 主srcoll 滑到底部时 foodList 让滚动到顶部
-        foodListScrollEnabled&&this.foodList.scrollToLocation({animated: true,itemIndex:0,sectionIndex:0,viewOffset:0,viewPosition:0});
+        // foodListScrollEnabled&&this.foodList.scrollToLocation({animated: true,itemIndex:0,sectionIndex:0,viewOffset:0,viewPosition:0});
 
     }
     componentDidMount() {
@@ -316,7 +341,10 @@ export  default class ShopScreen extends React.Component{
                 shippingFee:parseFloat(this.props.navigation.getParam('shippingFee')),
                 sendOutUp:0
             }
+
         });
+
+        console.log('---->'+ Device.NavigationBarHeight);
 
     }
     ///移除订阅
