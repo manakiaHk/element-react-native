@@ -33,8 +33,7 @@ Have an Android emulator running (quickest way to get started), or a device conn
 $ react-native run-android 
 ```
   
-  ![image](https://github.com/manakiaHk/Assets/blob/master/screenshot/shop01.png)
-  ![image](https://github.com/manakiaHk/Assets/blob/master/screenshot/shop02.png)
+  ![image](https://github.com/manakiaHk/Assets/blob/master/screenshot/shop.png)
   ![image](https://github.com/manakiaHk/Assets/blob/master/screenshot/screenshot-home.png)
   
    ![image](https://github.com/manakiaHk/Assets/blob/master/screenshot/screenshot-home.png)
