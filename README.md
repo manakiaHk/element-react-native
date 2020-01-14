@@ -33,7 +33,7 @@ Have an Android emulator running (quickest way to get started), or a device conn
 ```bash
 $ react-native run-android 
 ```
-## 如果你遇到问题，请联系我：邮箱1085415288@qq.com。
+#### 如果你遇到问题，请联系我：邮箱1085415288@qq.com。
   
   ![image](https://github.com/manakiaHk/Assets/blob/master/screenshot/shop.png)
   ![image](https://github.com/manakiaHk/Assets/blob/master/screenshot/screenshot-home.png)
