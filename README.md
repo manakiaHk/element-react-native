@@ -29,6 +29,8 @@ Open element/ios/elementStu.xcworkspace in Xcode or run "xed -b ios" ,Hit the Ru
 
 3.Run instructions for Android:
 Have an Android emulator running (quickest way to get started), or a device connected; 
+
+###如果你遇到问题，请联系我：邮箱1085415288@qq.com。
 ```bash
 $ react-native run-android 
 ```
